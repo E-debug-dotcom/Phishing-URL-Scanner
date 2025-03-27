@@ -75,3 +75,24 @@ Example Response :
   "url": "http://phishing-site.com"
 }
 ```
+is_phishing: true or false indicating whether the URL is phishing or not.
+url: The URL you submitted for analysis.
+
+### 2. Use with Python (Alternative to cURL)
+
+You can also use the Python requests module to interact with the API. Here's how:
+
+```python
+import requests
+
+url = "http://127.0.0.1:5000/predict"
+data = {"url": "http://phishing-site.com"}
+response = requests.post(url, json=data)
+print(response.json())
+```
+
+### 3. Check the Result
+
+The response will contain a JSON with is_phishing (true/false) and the URL you submitted. Based on this result, you can determine if the URL is malicious or safe.
+
+
