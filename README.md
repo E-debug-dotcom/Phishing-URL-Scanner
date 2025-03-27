@@ -30,5 +30,39 @@ Start by cloning the repository to your local machine:
 ```bash
 git clone https://github.com/E-debug-dotcom/Phishing-URL-Scanner.git
 cd Phishing-URL-Scanner
+```
 ### 2. Set Up the Environment
 
+You can create a virtual environment to isolate the dependencies:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+### 3. Install Dependencies
+
+Once your environment is set up, install the required Python libraries:
+
+```bash
+pip install -r requirements.txt
+```
+### 4. Run the Flask Application
+
+Now that everything is set up, you can run the Flask app:
+
+```bash
+python app.py
+```
+
+## ⚡ How to Use
+
+### 1. Access the API
+
+To use the Phishing URL Scanner, you can make a POST request to the /predict endpoint.
+
+Example Request : 
+```bash
+curl -X POST -H "Content-Type: application/json" \
+  -d '{"url": "http://phishing-site.com"}' \
+  http://127.0.0.1:5000/predict
+```
