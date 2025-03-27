@@ -61,8 +61,17 @@ python app.py
 To use the Phishing URL Scanner, you can make a POST request to the /predict endpoint.
 
 Example Request : 
+
 ```bash
 curl -X POST -H "Content-Type: application/json" \
   -d '{"url": "http://phishing-site.com"}' \
   http://127.0.0.1:5000/predict
+```
+Example Response : 
+
+```json
+{
+  "is_phishing": true,
+  "url": "http://phishing-site.com"
+}
 ```
